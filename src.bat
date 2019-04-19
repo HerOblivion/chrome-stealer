@@ -15,7 +15,7 @@ cd %drive%:\Users\%username%\AppData\Local\Google\Chrome\User Data\Default\
 xcopy "Login Data" C:\Users\%username%\Desktop
 echo Copied to Desktop!
 set /p=Press any key to exit...
-goto :unlock
+exit
 :top1
 set /p output=Output Location: 
 set /p=Press any key to dump passwords...
@@ -23,7 +23,7 @@ cd %drive%:\Users\%username%\AppData\Local\Google\Chrome\User Data\Default\
 xcopy "Login Data" %output%
 echo Copied to Desktop!
 set /p=Press any key to exit...
-goto :unlock
+exit
 :sec
 set /p out=Output Location? [y/n]: 
 if '%out%'=='y' goto :sec1
@@ -33,7 +33,7 @@ xcopy "Login Data" C:\Users\%username%\Desktop
 xcopy "Login Data2" C:\Users\%username%\Desktop
 echo Copied to Desktop!
 set /p=Press any key to exit...
-goto :unlock
+exit
 :sec1
 set /p output=Output Location: 
 set /p=Press any key to dump passwords...
@@ -42,11 +42,3 @@ xcopy "Login Data" %output%
 xcopy "Login Data2" %output%
 echo Copied to %output%
 set /p=Press any key to exit...
-goto :unlock
-:unlock
-title Chrome Password Recovery by Her ^|^ Unlock Mode
-cls
-echo Chrome Password Recovery Software by Her ^|^ Unlock Mode
-echo Python MUST be installed!
-echo --------------------------------------------------------
-start iexplore https://www.python.org/downloads/
